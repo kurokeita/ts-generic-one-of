@@ -34,8 +34,8 @@ const var2: TestType = { b: 'test' };
 const var3: TestType = { c: false };
 
 // Invalid
-const var4: TestType = { a: 1, b: 'test' }; // Have properties from multiple types
-const var5: TestType = { a: 'string' }; // Property has invalid type
+const var4: TestType = { a: 1, b: 'test' }; // Have properties with invalid types
+const var5: TestType = { a: 'string' }; // Missing property(ies)
 ```
 
 ## API
