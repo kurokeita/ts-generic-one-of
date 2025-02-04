@@ -1,6 +1,6 @@
 {
   "name": "ts-generic-oneof",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generic type OneOf",
   "author": "minh.le",
   "license": "MIT",
