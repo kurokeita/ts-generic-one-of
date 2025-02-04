@@ -15,6 +15,7 @@ import { OneOf } from 'ts-generic-oneof';
 
 interface A {
   a: number;
+  b: number;
 }
 
 interface B {
@@ -28,7 +29,7 @@ interface C {
 type TestType = OneOf<[A, B, C]>;
 
 // Valid
-const var1: TestType = { a: 1 };
+const var1: TestType = { a: 1, b: 1 };
 const var2: TestType = { b: 'test' };
 const var3: TestType = { c: false };
 

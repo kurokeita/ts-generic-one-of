@@ -11,7 +11,9 @@ type ExcludeFromTuple<T extends any[], U> = T extends [infer F, ...infer R]
   : [];
 
 type OneOfVariant<T, U extends any[]> = T & {
-  [K in keyof UnionToIntersection<U[number]>]?: never;
+  [K in keyof UnionToIntersection<U[number]>]?: K extends keyof T
+    ? T[K]
+    : never;
 };
 
 export type OneOf<T extends any[]> = {
@@ -19,14 +21,14 @@ export type OneOf<T extends any[]> = {
 }[number];
 
 // Example usage:
-// interface TypeA { a: number }
+// interface TypeA { a: number, b: number }
 // interface TypeB { b: string }
 // interface TypeC { c: boolean }
 //
 // type ExclusiveType = OneOf<[TypeA, TypeB, TypeC]>;
 //
 // Valid:
-//   { a: 1 } or
+//   { a: 1, b: 1 } or
 //   { b: 'text' } or
 //   { c: true }
 // Invalid:
