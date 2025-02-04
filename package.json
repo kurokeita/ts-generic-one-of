@@ -1,0 +1,22 @@
+{
+  "name": "ts-generic-oneof",
+  "version": "1.0.0",
+  "description": "Generic type OneOf",
+  "author": "minh.le",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "typescripts",
+    "ts",
+    "one-of",
+    "generic"
+  ],
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}
